@@ -1,0 +1,33 @@
+[project]
+name = "py1"
+version = "0.1.0"
+description = "Add your description here"
+dependencies = [
+    "black>=23.11.0",
+    "Pillow>=10.1.0",
+    "pandas>=2.0.3",
+    "matplotlib>=3.7.4",
+    "numpy>=1.24.4",
+    "psutil>=5.9.6",
+    "pandasql>=0.7.3",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=7.4.3",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
